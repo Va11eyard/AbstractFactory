@@ -1,10 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        PostFactory postFactory = new PostFactory();
-        SocialMediaPost facebookPost = postFactory.createPost("Facebook", "Mark founded Facebook.");
-        SocialMediaPost twitterPost = postFactory.createPost("Twitter", "Elon renamed it as X.");
+        //text
+        SocialMediaPostFactory textFactory = new TextPostFactory();
+        SocialMediaPost textPost = textFactory.createPost();
+        textPost.share();
 
-        facebookPost.createPost();
-        twitterPost.createPost();
+        //image
+        SocialMediaPostFactory imageFactory = new ImagePostFactory();
+        SocialMediaPost imagePost = imageFactory.createPost();
+        imagePost.share();
+
+        //video
+        SocialMediaPostFactory videoFactory = new VideoPostFactory();
+        SocialMediaPost videoPost = videoFactory.createPost();
+        videoPost.share();
     }
 }

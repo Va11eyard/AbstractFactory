@@ -1,3 +1,3 @@
 public interface SocialMediaPost {
-    void createPost();
+    void share();
 }
